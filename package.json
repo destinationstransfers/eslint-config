@@ -1,0 +1,32 @@
+{
+  "name": "@destinationstransfers/eslint-config",
+  "version": "1.0.0",
+  "description": "Shareable ESLint config for our repos",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/destinationstransfers/eslint-config.git"
+  },
+  "author": "Tino Vyatkin <tino@vtkn.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/destinationstransfers/eslint-config/issues"
+  },
+  "homepage": "https://github.com/destinationstransfers/eslint-config#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-jsdoc": "^3.1.2",
+    "eslint-plugin-prettier": "^2.1.2"
+  }
+}
