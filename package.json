@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Shareable ESLint config for our repos",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.2"
+  },
   "peerDependencies": {
     "eslint": "^4.4.0"
   },
