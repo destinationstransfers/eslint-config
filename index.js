@@ -45,7 +45,7 @@ module.exports = {
     "require-await": "error",
     "no-restricted-syntax": "off",
     "no-throw-literal": "error",
-    "prefer-object-spread/prefer-object-spread": "error",
+    "prefer-object-spread/prefer-object-spread": "warn",
     "prettier/prettier": [
       "error",
       {
@@ -66,7 +66,9 @@ module.exports = {
     "jsdoc/require-param-description": 0,
     "jsdoc/require-param-type": 2,
     "jsdoc/require-returns-description": 0,
-    "jsdoc/require-returns-type": 1
+    "jsdoc/require-returns-type": 1,
+    "node/no-unpublished-require": "off",
+    "import/no-extraneous-dependencies": 0,
   },
   settings: {
     "import/ignore": ["node_modules"],
