@@ -15,10 +15,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2017
   },
-  globals: {
-    URL: false
-  },
-  plugins: ["prefer-object-spread", "jsdoc", "jest", "prettier"],
+  plugins: ["prefer-object-spread", "jsdoc", "jest", "prettier", "node"],
   rules: {
     "getter-return": "error",
     "arrow-parens": "off",
@@ -38,7 +35,7 @@ module.exports = {
       }
     ],
     indent: "off", // prettier will do it better
-    "jest/no-disabled-tests": 2,
+    "jest/no-disabled-tests": 0, // will allow test.skip
     "jest/no-identical-title": 2,
     "jest/no-focused-tests": "error",
     "jest/valid-expect": "error",
