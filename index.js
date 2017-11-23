@@ -17,6 +17,7 @@ module.exports = {
   },
   plugins: ["prefer-object-spread", "jsdoc", "jest", "prettier", "node"],
   rules: {
+    complexity: ["error", { max: 10 }],
     "getter-return": "error",
     "arrow-parens": "off",
     "guard-for-in": "off",
@@ -65,7 +66,7 @@ module.exports = {
     "jsdoc/require-returns-description": 0,
     "jsdoc/require-returns-type": 1,
     "node/no-unpublished-require": "off",
-    "import/no-extraneous-dependencies": 0,
+    "import/no-extraneous-dependencies": 0
   },
   settings: {
     "import/ignore": ["node_modules"],
