@@ -17,7 +17,22 @@ module.exports = {
   },
   plugins: ["prefer-object-spread", "jsdoc", "jest", "prettier", "node"],
   rules: {
-    complexity: ["error", { max: 10 }],
+    // code quality
+    complexity: ["error", { max: 20 }],
+    "max-lines": [
+      "error",
+      { max: 600, skipComments: true, skipBlankLines: true }
+    ],
+    "max-depth": ["error", 4],
+    "max-params": ["error", 4],
+    "max-statements": ["error", 30, { ignoreTopLevelFunctions: true }],
+    "max-nested-callbacks": ["error", 3],
+    "no-warning-comments": [
+      "warn",
+      { terms: ["todo", "fixme", "future"], location: "start" }
+    ],
+    // language features
+    "accessor-pairs": ["error", { getWithoutSet: true }],
     "getter-return": "error",
     "arrow-parens": "off",
     "guard-for-in": "off",
@@ -27,6 +42,10 @@ module.exports = {
     "no-extra-bind": "error",
     "no-sync": "warn",
     "no-confusing-arrow": "off",
+    "require-await": "error",
+    "no-restricted-syntax": "off",
+    "no-throw-literal": "error",
+    // presentation
     "sort-imports": [
       "error",
       {
@@ -40,9 +59,6 @@ module.exports = {
     "jest/no-identical-title": 2,
     "jest/no-focused-tests": "error",
     "jest/valid-expect": "error",
-    "require-await": "error",
-    "no-restricted-syntax": "off",
-    "no-throw-literal": "error",
     "prefer-object-spread/prefer-object-spread": "warn",
     "prettier/prettier": [
       "error",
