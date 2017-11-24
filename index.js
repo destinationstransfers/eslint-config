@@ -21,7 +21,8 @@ module.exports = {
     "jest",
     "prettier",
     "node",
-    "optimize-regex"
+    "optimize-regex",
+    "sort-requires"
   ],
   rules: {
     // code quality
@@ -54,6 +55,7 @@ module.exports = {
     "no-restricted-syntax": "off",
     "no-throw-literal": "error",
     // presentation
+    "sort-requires/sort-requires": "error",
     "sort-imports": [
       "error",
       {
