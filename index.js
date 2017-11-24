@@ -6,7 +6,12 @@
 "use strict";
 
 module.exports = {
-  extends: ["eslint:recommended", "airbnb-base", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "airbnb-base",
+    "prettier",
+    "eslint-comments/recommended"
+  ],
   env: {
     es6: true,
     jest: true,
@@ -22,7 +27,8 @@ module.exports = {
     "prettier",
     "node",
     "optimize-regex",
-    "sort-requires"
+    "sort-requires",
+    "eslint-comments"
   ],
   rules: {
     // code quality
@@ -40,6 +46,7 @@ module.exports = {
       { terms: ["todo", "fixme", "future"], location: "start" }
     ],
     "optimize-regex/optimize-regex": "warn",
+    "eslint-comments/disable-enable-pair": "off",
     // language features
     "accessor-pairs": ["error", { getWithoutSet: true }],
     "getter-return": "error",
