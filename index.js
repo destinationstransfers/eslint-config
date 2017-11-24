@@ -27,7 +27,7 @@ module.exports = {
     // code quality
     complexity: ["error", { max: 20 }],
     "max-lines": [
-      "error",
+      "warn",
       { max: 600, skipComments: true, skipBlankLines: true }
     ],
     "max-depth": ["error", 4],
