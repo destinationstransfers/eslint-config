@@ -15,7 +15,14 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2017
   },
-  plugins: ["prefer-object-spread", "jsdoc", "jest", "prettier", "node"],
+  plugins: [
+    "prefer-object-spread",
+    "jsdoc",
+    "jest",
+    "prettier",
+    "node",
+    "optimize-regex"
+  ],
   rules: {
     // code quality
     complexity: ["error", { max: 20 }],
@@ -31,6 +38,7 @@ module.exports = {
       "warn",
       { terms: ["todo", "fixme", "future"], location: "start" }
     ],
+    "optimize-regex/optimize-regex": "warn",
     // language features
     "accessor-pairs": ["error", { getWithoutSet: true }],
     "getter-return": "error",
