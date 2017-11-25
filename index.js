@@ -61,6 +61,7 @@ module.exports = {
     'require-await': 'error',
     'no-restricted-syntax': 'off',
     'no-throw-literal': 'error',
+    'no-restricted-globals': 'off',
     // presentation
     'sort-requires/sort-requires': 'error',
     'sort-imports': [
