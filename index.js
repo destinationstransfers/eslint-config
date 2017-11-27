@@ -72,6 +72,8 @@ module.exports = {
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       },
     ],
+    'sort-keys': ['warn', 'asc', { caseSensitive: false, natural: true }],
+    'sort-vars': ['error', { ignoreCase: true }],
     indent: 'off', // prettier will do it better
     'jest/no-disabled-tests': 0, // will allow test.skip
     'jest/no-identical-title': 2,
