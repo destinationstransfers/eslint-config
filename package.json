@@ -7,13 +7,14 @@
     "node": ">=8.2"
   },
   "peerDependencies": {
-    "eslint": "^4.11.0"
+    "eslint": "^4.13.0"
   },
   "devDependencies": {
     "eslint": "4.13.0"
   },
   "scripts": {
-    "test": "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
+    "test":
+      "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
   },
   "repository": {
     "type": "git",
@@ -27,16 +28,16 @@
   "homepage": "https://github.com/destinationstransfers/eslint-config#readme",
   "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.8.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-eslint-comments": "^2.0.1",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-jest": "^21.4.2",
     "eslint-plugin-jsdoc": "^3.2.0",
     "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-optimize-regex": "^1.1.4",
+    "eslint-plugin-optimize-regex": "^1.1.5",
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-sort-requires": "^2.1.0",
-    "prettier": "^1.8.2"
+    "prettier": "^1.9.1"
   }
 }

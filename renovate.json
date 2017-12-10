@@ -1,5 +1,8 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "enabled": true,
+  "extends": ["config:js-app"],
+  "baseBranch": "master",
+  "respectLatest": false,
+  "labels": ["dependencies"],
+  "timezone": "America/Santo_Domingo"
 }

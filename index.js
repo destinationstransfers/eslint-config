@@ -11,11 +11,13 @@ module.exports = {
     'airbnb-base',
     'prettier',
     'plugin:eslint-comments/recommended',
+    'plugin:jest/recommended',
   ],
   env: {
     es6: true,
     jest: true,
     jasmine: true,
+    'jest/globals': true,
   },
   parserOptions: {
     ecmaVersion: 2017,
@@ -62,6 +64,7 @@ module.exports = {
     'no-restricted-syntax': 'off',
     'no-throw-literal': 'error',
     'no-restricted-globals': 'off',
+    'prefer-object-spread/prefer-object-spread': 'warn',
     // presentation
     'sort-requires/sort-requires': 'error',
     'sort-imports': [
@@ -75,11 +78,14 @@ module.exports = {
     'sort-keys': ['warn', 'asc', { caseSensitive: false, natural: true }],
     'sort-vars': ['error', { ignoreCase: true }],
     indent: 'off', // prettier will do it better
+    // jest
     'jest/no-disabled-tests': 0, // will allow test.skip
     'jest/no-identical-title': 2,
     'jest/no-focused-tests': 'error',
     'jest/valid-expect': 'error',
-    'prefer-object-spread/prefer-object-spread': 'warn',
+    'jest/prefer-to-be-null': 'error',
+    'jest/prefer-to-be-undefined': 'error',
+    // Prettier
     'prettier/prettier': [
       'error',
       {
