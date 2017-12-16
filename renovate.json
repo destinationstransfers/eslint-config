@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "extends": ["config:js-app"],
+  "extends": ["config:js-lib"],
   "baseBranch": "master",
   "respectLatest": false,
   "labels": ["dependencies"],
