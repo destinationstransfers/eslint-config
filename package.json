@@ -13,7 +13,8 @@
     "eslint": "4.13.1"
   },
   "scripts": {
-    "test": "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
+    "test":
+      "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
   },
   "repository": {
     "type": "git",
@@ -30,13 +31,23 @@
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-eslint-comments": "2.0.1",
     "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-jest": "21.5.0",
-    "eslint-plugin-jsdoc": "3.3.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "eslint-plugin-jsdoc": "^3.3.0",
     "eslint-plugin-node": "5.2.1",
     "eslint-plugin-optimize-regex": "1.1.5",
     "eslint-plugin-prefer-object-spread": "1.2.1",
     "eslint-plugin-prettier": "2.3.1",
     "eslint-plugin-sort-requires": "2.1.0",
     "prettier": "1.9.2"
+  },
+  "eslintConfig": {
+    "plugins": ["node"],
+    "extends": ["./index.js"],
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "script"
+    }
   }
 }
