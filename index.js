@@ -50,7 +50,7 @@ module.exports = {
     'optimize-regex/optimize-regex': 'warn',
     'eslint-comments/disable-enable-pair': 'off',
     // language features
-    'accessor-pairs': ['error', { getWithoutSet: true }],
+    'accessor-pairs': ['error', { setWithoutGet: true }],
     'getter-return': 'error',
     'arrow-parens': 'off',
     'guard-for-in': 'off',
@@ -79,8 +79,8 @@ module.exports = {
     'sort-vars': ['error', { ignoreCase: true }],
     indent: 'off', // prettier will do it better
     // jest
-    'jest/no-disabled-tests': 0, // will allow test.skip
-    'jest/no-identical-title': 2,
+    'jest/no-disabled-tests': 'off', // will allow test.skip
+    'jest/no-identical-title': 'error',
     'jest/no-focused-tests': 'error',
     'jest/valid-expect': 'error',
     'jest/prefer-to-be-null': 'error',
