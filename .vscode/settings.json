@@ -1,3 +1,6 @@
 {
-  "deepscan.ignoreConfirmWarning": true
+  "deepscan.ignoreConfirmWarning": true,
+  "prettier.disableLanguages": [
+    "javascript"
+  ]
 }
