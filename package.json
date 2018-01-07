@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-config",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Shareable ESLint config for our repos",
   "main": "index.js",
   "engines": {
@@ -13,8 +13,7 @@
     "eslint": "4.15.0"
   },
   "scripts": {
-    "test":
-      "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
+    "test": "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
   },
   "repository": {
     "type": "git",
@@ -41,8 +40,12 @@
     "prettier": "1.9.2"
   },
   "eslintConfig": {
-    "plugins": ["node"],
-    "extends": ["./index.js"],
+    "plugins": [
+      "node"
+    ],
+    "extends": [
+      "./index.js"
+    ],
     "env": {
       "node": true
     },
