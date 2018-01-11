@@ -75,16 +75,16 @@ module.exports = {
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       },
     ],
-    'sort-keys': ['warn', 'asc', { caseSensitive: false, natural: true }],
+    'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
     'sort-vars': ['error', { ignoreCase: true }],
     indent: 'off', // prettier will do it better
     // jest
     'jest/no-disabled-tests': 'off', // will allow test.skip
-    'jest/no-identical-title': 'error',
     'jest/no-focused-tests': 'error',
-    'jest/valid-expect': 'error',
+    'jest/no-identical-title': 'error',
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
+    'jest/valid-expect': 'error',
     // Prettier
     'prettier/prettier': [
       'error',
