@@ -16,11 +16,10 @@ module.exports = {
   env: {
     es6: true,
     jest: true,
-    jasmine: true,
     'jest/globals': true,
   },
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2018,
   },
   plugins: [
     'prefer-object-spread',
@@ -78,6 +77,7 @@ module.exports = {
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
     'sort-vars': ['error', { ignoreCase: true }],
     indent: 'off', // prettier will do it better
+    'no-underscore-dangle': 'off', // MongoDB is hard with it
     // jest
     'jest/no-disabled-tests': 'off', // will allow test.skip
     'jest/no-focused-tests': 'error',
