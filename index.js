@@ -64,6 +64,9 @@ module.exports = {
     'no-throw-literal': 'error',
     'no-restricted-globals': 'off',
     'prefer-object-spread/prefer-object-spread': 'warn',
+    'spaced-comment': 'off',
+    camelcase: 'off',
+    'no-continue': 'off',
     // presentation
     'sort-requires/sort-requires': 'error',
     'sort-imports': [
@@ -114,4 +117,23 @@ module.exports = {
     'import/ignore': ['node_modules'],
     'import/extensions': ['.js'],
   },
+  globals: {
+    URL: false,
+    URLSearchParams: false,
+  },
+  overrides: [
+    {
+      files: ['__tests__/*.js', '*.test.js'],
+      env: {
+        jest: true,
+        browser: true,
+      },
+      rules: {
+        // we need unused vars in tests for mocking sometimes
+        'no-unused-vars': 'off',
+        // it's ok to write very long integration tests
+        'max-statements': 'off',
+      },
+    },
+  ],
 };
