@@ -22,7 +22,6 @@ module.exports = {
     ecmaVersion: 2018,
   },
   plugins: [
-    'prefer-object-spread',
     'jsdoc',
     'jest',
     'prettier',
@@ -63,7 +62,6 @@ module.exports = {
     'no-restricted-syntax': 'off',
     'no-throw-literal': 'error',
     'no-restricted-globals': 'off',
-    'prefer-object-spread/prefer-object-spread': 'warn',
     'spaced-comment': 'off',
     camelcase: 'off',
     'no-continue': 'off',
