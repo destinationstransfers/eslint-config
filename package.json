@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/destinationstransfers/eslint-config#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-eslint-comments": "^3.0.0",
     "eslint-plugin-import": "^2.13.0",

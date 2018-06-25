@@ -8,7 +8,6 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'airbnb-base',
     'prettier',
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
