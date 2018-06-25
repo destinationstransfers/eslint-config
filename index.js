@@ -46,6 +46,7 @@ module.exports = {
     ],
     'optimize-regex/optimize-regex': 'warn',
     'eslint-comments/disable-enable-pair': 'off',
+    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     // language features
     'accessor-pairs': ['error', { setWithoutGet: true }],
     'getter-return': 'error',
