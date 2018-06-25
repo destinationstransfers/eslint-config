@@ -11,6 +11,8 @@ module.exports = {
     'prettier',
     'plugin:eslint-comments/recommended',
     'plugin:jest/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   env: {
     es6: true,
@@ -25,6 +27,7 @@ module.exports = {
     'jest',
     'prettier',
     'node',
+    'import',
     'optimize-regex',
     'sort-requires',
     'eslint-comments',
