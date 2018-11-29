@@ -1,7 +1,7 @@
 /*
-* Destinations Transfers Shareable ESLint Config:
-* http://eslint.org/docs/developer-guide/shareable-configs
-*/
+ * Destinations Transfers Shareable ESLint Config:
+ * http://eslint.org/docs/developer-guide/shareable-configs
+ */
 
 'use strict';
 
@@ -104,6 +104,7 @@ module.exports = {
     'jsdoc/check-tag-names': 2,
     'jsdoc/check-types': 2,
     'jsdoc/newline-after-description': 1,
+    'jsdoc/no-undefined-types': 1,
     'jsdoc/require-description-complete-sentence': 0,
     'jsdoc/require-hyphen-before-param-description': 2,
     'jsdoc/require-param': 1,
