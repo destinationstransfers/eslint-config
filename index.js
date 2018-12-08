@@ -13,6 +13,7 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
+    'plugin:node/recommended',
   ],
   env: {
     es6: true,
@@ -84,11 +85,12 @@ module.exports = {
     'no-underscore-dangle': 'off', // MongoDB is hard with it
     // jest
     'jest/no-disabled-tests': 'off', // will allow test.skip
-    'jest/no-focused-tests': 'error',
+    'jest/prefer-spy-on': 'error',
     'jest/no-identical-title': 'error',
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
     'jest/valid-expect': 'error',
+    'jest/prefer-to-contain': 'error',
     // Prettier
     'prettier/prettier': [
       'error',
@@ -100,28 +102,29 @@ module.exports = {
       },
     ],
     // eslint-plugin-jsdoc - https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-configuration
-    'jsdoc/check-param-names': 2,
-    'jsdoc/check-tag-names': 2,
-    'jsdoc/check-types': 2,
-    'jsdoc/newline-after-description': 1,
-    'jsdoc/no-undefined-types': 1,
-    'jsdoc/require-description-complete-sentence': 0,
-    'jsdoc/require-hyphen-before-param-description': 2,
-    'jsdoc/require-param': 1,
-    'jsdoc/require-param-description': 0,
-    'jsdoc/require-param-type': 2,
-    'jsdoc/require-returns-description': 0,
-    'jsdoc/require-returns-type': 1,
-    'node/no-unpublished-require': 'off',
+    'jsdoc/check-param-names': 'error',
+    'jsdoc/check-tag-names': 'error',
+    'jsdoc/check-types': 'error',
+    'jsdoc/newline-after-description': ['warn', 'always'],
+    'jsdoc/no-undefined-types': 'warn',
+    'jsdoc/require-description': 'off',
+    'jsdoc/require-description-complete-sentence': 'off',
+    'jsdoc/require-example': 'off',
+    'jsdoc/require-hyphen-before-param-description': 'error',
+    'jsdoc/require-param': 'error',
+    'jsdoc/require-param-description': 'warn',
+    'jsdoc/require-param-name': 'error',
+    'jsdoc/require-param-type': 'error',
+    'jsdoc/require-returns-description': 'warn',
+    'jsdoc/require-returns-type': 'error',
+    'jsdoc/valid-types': 'error',
+    // others
+    'node/no-unpublished-require': 'warn',
     'import/no-extraneous-dependencies': 0,
   },
   settings: {
     'import/ignore': ['node_modules'],
-    'import/extensions': ['.js'],
-  },
-  globals: {
-    URL: false,
-    URLSearchParams: false,
+    'import/extensions': ['.js', '.mjs'],
   },
   overrides: [
     {
@@ -132,7 +135,7 @@ module.exports = {
       },
       rules: {
         // we need unused vars in tests for mocking sometimes
-        'no-unused-vars': 'off',
+        'no-unused-vars': 'warn',
         // it's ok to write very long integration tests
         'max-statements': 'off',
       },
