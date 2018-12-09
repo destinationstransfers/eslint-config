@@ -104,7 +104,7 @@ module.exports = {
     // eslint-plugin-jsdoc - https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-configuration
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-tag-names': 'error',
-    'jsdoc/check-types': 'error',
+    'jsdoc/check-types': 'warn',
     'jsdoc/newline-after-description': ['warn', 'always'],
     'jsdoc/no-undefined-types': 'warn',
     'jsdoc/require-description': 'off',
@@ -117,7 +117,7 @@ module.exports = {
     'jsdoc/require-param-type': 'error',
     'jsdoc/require-returns-description': 'warn',
     'jsdoc/require-returns-type': 'error',
-    'jsdoc/valid-types': 'error',
+    'jsdoc/valid-types': 'warn',
     // others
     'node/no-unpublished-require': 'warn',
     'import/no-extraneous-dependencies': 0,
