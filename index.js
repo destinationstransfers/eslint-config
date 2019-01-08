@@ -29,6 +29,7 @@ module.exports = {
     'prettier',
     'node',
     'import',
+    'dependencies',
     'optimize-regex',
     'sort-requires',
     'eslint-comments',
@@ -121,6 +122,10 @@ module.exports = {
     // others
     'node/no-unpublished-require': 'warn',
     'import/no-extraneous-dependencies': 0,
+    'dependencies/case-sensitive': 'warn',
+    'dependencies/no-cycles': 'error',
+    'dependencies/no-unresolved': 'error',
+    'dependencies/require-json-ext': 0,
   },
   settings: {
     'import/ignore': ['node_modules'],
