@@ -14,6 +14,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:node/recommended',
+    'plugin:sonarjs/recommended',
   ],
   env: {
     es6: true,
@@ -33,6 +34,7 @@ module.exports = {
     'optimize-regex',
     'sort-requires',
     'eslint-comments',
+    'sonarjs',
   ],
   rules: {
     // code quality
