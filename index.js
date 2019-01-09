@@ -39,6 +39,7 @@ module.exports = {
   rules: {
     // code quality
     complexity: ['error', { max: 20 }],
+    'sonarjs/cognitive-complexity': ['error', 21],
     'max-lines': [
       'warn',
       { max: 600, skipComments: true, skipBlankLines: true },
@@ -123,11 +124,12 @@ module.exports = {
     'jsdoc/valid-types': 'warn',
     // others
     'node/no-unpublished-require': 'warn',
-    'import/no-extraneous-dependencies': 0,
-    'dependencies/case-sensitive': 'warn',
+    'import/no-extraneous-dependencies': 'warn',
+    'dependencies/case-sensitive': 'error',
     'dependencies/no-cycles': 'error',
+    'import/no-cycle': 'error',
     'dependencies/no-unresolved': 'error',
-    'dependencies/require-json-ext': 0,
+    'dependencies/require-json-ext': 'warn',
   },
   settings: {
     'import/ignore': ['node_modules'],
