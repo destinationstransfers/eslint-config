@@ -39,7 +39,8 @@ module.exports = {
   rules: {
     // code quality
     complexity: ['error', { max: 20 }],
-    'sonarjs/cognitive-complexity': ['error', 21],
+    // sonar complexity is greater than eslint
+    'sonarjs/cognitive-complexity': ['error', 30],
     'max-lines': [
       'warn',
       { max: 600, skipComments: true, skipBlankLines: true },
