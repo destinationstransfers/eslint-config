@@ -41,6 +41,14 @@ module.exports = {
     complexity: ['error', { max: 20 }],
     // sonar complexity is greater than eslint
     'sonarjs/cognitive-complexity': ['error', 30],
+    'sonarjs/no-duplicate-string': 'warn',
+    'node/exports-style': [
+      'warn',
+      'exports',
+      {
+        allowBatchAssign: true,
+      },
+    ],
     'max-lines': [
       'warn',
       { max: 600, skipComments: true, skipBlankLines: true },
