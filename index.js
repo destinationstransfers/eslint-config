@@ -137,6 +137,8 @@ module.exports = {
     'dependencies/case-sensitive': 'error',
     'dependencies/no-cycles': 'error',
     'import/no-cycle': 'error',
+    'import/named': 'error',
+    'import/default': 'error',
     'dependencies/no-unresolved': 'error',
     'dependencies/require-json-ext': 'warn',
   },
