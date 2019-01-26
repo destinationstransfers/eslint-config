@@ -15,6 +15,7 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:node/recommended',
     'plugin:sonarjs/recommended',
+    'plugin:promise/recommended',
   ],
   env: {
     es6: true,
@@ -25,16 +26,17 @@ module.exports = {
     ecmaVersion: 2018,
   },
   plugins: [
-    'jsdoc',
-    'jest',
-    'prettier',
-    'node',
-    'import',
     'dependencies',
-    'optimize-regex',
-    'sort-requires',
     'eslint-comments',
+    'import',
+    'jest',
+    'jsdoc',
+    'node',
+    'optimize-regex',
+    'prettier',
+    'promise',
     'sonarjs',
+    'sort-requires',
   ],
   rules: {
     // code quality
@@ -42,13 +44,7 @@ module.exports = {
     // sonar complexity is greater than eslint
     'sonarjs/cognitive-complexity': ['error', 30],
     'sonarjs/no-duplicate-string': 'warn',
-    'node/exports-style': [
-      'warn',
-      'exports',
-      {
-        allowBatchAssign: true,
-      },
-    ],
+    'node/exports-style': ['warn', 'module.exports'],
     'max-lines': [
       'warn',
       { max: 600, skipComments: true, skipBlankLines: true },
@@ -62,7 +58,6 @@ module.exports = {
       { terms: ['todo', 'fixme', 'future'], location: 'start' },
     ],
     'optimize-regex/optimize-regex': 'warn',
-    'eslint-comments/disable-enable-pair': 'off',
     'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     // language features
     'accessor-pairs': ['error', { setWithoutGet: true }],
@@ -94,11 +89,10 @@ module.exports = {
     ],
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
     'sort-vars': ['error', { ignoreCase: true }],
-    indent: 'off', // prettier will do it better
     'no-underscore-dangle': 'off', // MongoDB is hard with it
     // jest
     'jest/no-disabled-tests': 'off', // will allow test.skip
-    'jest/prefer-spy-on': 'error',
+    'jest/prefer-spy-on': 'off', // buggy
     'jest/no-identical-title': 'error',
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
@@ -141,6 +135,9 @@ module.exports = {
     'import/default': 'error',
     'dependencies/no-unresolved': 'error',
     'dependencies/require-json-ext': 'warn',
+    // eslint comments
+    'eslint-comments/no-unused-disable': 'error',
+    'eslint-comments/disable-enable-pair': 'off',
   },
   settings: {
     'import/ignore': ['node_modules'],
