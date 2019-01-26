@@ -13,7 +13,9 @@
     "eslint": "5.12.1"
   },
   "scripts": {
-    "test": "eslint *.js --parser-options=sourceType:script --env=node -c index.js"
+    "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c index.js",
+    "test:prettier": "eslint --print-config . | eslint-config-prettier-check",
+    "test": "npm run test:itself && npm run test:prettier"
   },
   "files": [
     "index.js"
@@ -29,7 +31,7 @@
   },
   "homepage": "https://github.com/destinationstransfers/eslint-config#readme",
   "dependencies": {
-    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-dependencies": "^2.4.0",
     "eslint-plugin-eslint-comments": "^3.0.1",
     "eslint-plugin-import": "^2.15.0",
@@ -38,6 +40,7 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-optimize-regex": "latest",
     "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-sonarjs": "^0.2.0",
     "eslint-plugin-sort-requires": "latest",
     "prettier": "^1.16.1"
