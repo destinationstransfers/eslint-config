@@ -125,7 +125,7 @@ module.exports = {
     'jsdoc/require-param-type': 'error',
     'jsdoc/require-returns-description': 'warn',
     'jsdoc/require-returns-type': 'error',
-    'jsdoc/require-returns-check': 'error',
+    'jsdoc/require-returns-check': 'warn',
     'jsdoc/check-types': 'warn',
     'jsdoc/valid-types': 'warn',
     // lit-html rules for html`<body></body> template literals - https://github.com/43081j/eslint-plugin-lit
@@ -144,7 +144,7 @@ module.exports = {
     'unicorn/catch-error-name': [
       'error',
       {
-        name: 'error',
+        name: 'err',
       },
     ],
     // others
