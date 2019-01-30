@@ -31,12 +31,14 @@ module.exports = {
     'import',
     'jest',
     'jsdoc',
+    'lit',
     'node',
     'optimize-regex',
     'prettier',
     'promise',
     'sonarjs',
     'sort-requires',
+    'unicorn',
   ],
   rules: {
     // code quality
@@ -111,7 +113,6 @@ module.exports = {
     // eslint-plugin-jsdoc - https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-configuration
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-tag-names': 'error',
-    'jsdoc/check-types': 'warn',
     'jsdoc/newline-after-description': ['warn', 'always'],
     'jsdoc/no-undefined-types': 'warn',
     'jsdoc/require-description': 'off',
@@ -124,7 +125,28 @@ module.exports = {
     'jsdoc/require-param-type': 'error',
     'jsdoc/require-returns-description': 'warn',
     'jsdoc/require-returns-type': 'error',
+    'jsdoc/require-returns-check': 'error',
+    'jsdoc/check-types': 'warn',
     'jsdoc/valid-types': 'warn',
+    // lit-html rules for html`<body></body> template literals - https://github.com/43081j/eslint-plugin-lit
+    'lit/no-duplicate-template-bindings': 'error',
+    'lit/no-template-bind': 'error',
+    'lit/no-template-map': 'warn',
+    'lit/no-useless-template-literals': 'error',
+    'lit/attribute-value-entities': 'error',
+    'lit/no-invalid-html': 'error',
+    // unicorn - https://www.npmjs.com/package/eslint-plugin-unicorn
+    'unicorn/throw-new-error': 'error',
+    'unicorn/no-new-buffer': 'error',
+    'unicorn/prefer-starts-ends-with': 'error',
+    'unicorn/prefer-type-error': 'error',
+    'unicorn/no-unused-properties': 'warn',
+    'unicorn/catch-error-name': [
+      'error',
+      {
+        name: 'error',
+      },
+    ],
     // others
     'node/no-unpublished-require': 'warn',
     'import/no-extraneous-dependencies': 'warn',
@@ -133,15 +155,12 @@ module.exports = {
     'import/no-cycle': 'error',
     'import/named': 'error',
     'import/default': 'error',
+    'import/no-default-export': 'warn',
     'dependencies/no-unresolved': 'error',
-    'dependencies/require-json-ext': 'warn',
+    'dependencies/require-json-ext': 'off',
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
-  },
-  settings: {
-    'import/ignore': ['node_modules'],
-    'import/extensions': ['.js', '.mjs'],
   },
   overrides: [
     {
