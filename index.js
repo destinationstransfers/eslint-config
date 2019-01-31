@@ -120,10 +120,10 @@ module.exports = {
     'jsdoc/require-example': 'off',
     'jsdoc/require-hyphen-before-param-description': 'error',
     'jsdoc/require-param': 'error',
-    'jsdoc/require-param-description': 'warn',
+    'jsdoc/require-param-description': 'off',
     'jsdoc/require-param-name': 'error',
     'jsdoc/require-param-type': 'error',
-    'jsdoc/require-returns-description': 'warn',
+    'jsdoc/require-returns-description': 'off',
     'jsdoc/require-returns-type': 'error',
     'jsdoc/require-returns-check': 'warn',
     'jsdoc/check-types': 'warn',
@@ -161,6 +161,16 @@ module.exports = {
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
+  },
+  settings: {
+    jsdoc: {
+      additionalTagNames: {
+        customTags: ['template', 'constructor', 'extends'],
+      },
+      allowOverrideWithoutParam: true,
+      allowImplementsWithoutParam: true,
+      allowAugmentsExtendsWithoutParam: true,
+    },
   },
   overrides: [
     {
