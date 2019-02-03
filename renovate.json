@@ -1,11 +1,6 @@
 {
   "enabled": true,
-  "extends": [
-    "config:js-lib",
-    ":pinSkipCi",
-    "default:pinDigestsDisabled",
-    ":automergeMinor"
-  ],
+  "extends": [":pinSkipCi", "default:pinDigestsDisabled"],
   "baseBranch": "master",
   "respectLatest": false,
   "labels": ["dependencies"],
