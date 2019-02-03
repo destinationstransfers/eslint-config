@@ -149,13 +149,15 @@ module.exports = {
     ],
     // others
     'node/no-unpublished-require': 'warn',
+
     'import/no-extraneous-dependencies': 'warn',
-    'dependencies/case-sensitive': 'error',
-    'dependencies/no-cycles': 'error',
     'import/no-cycle': 'error',
     'import/named': 'error',
     'import/default': 'error',
     'import/no-default-export': 'warn',
+
+    'dependencies/no-cycles': 'error',
+    'dependencies/case-sensitive': 'error',
     'dependencies/no-unresolved': 'error',
     'dependencies/require-json-ext': 'off',
     // eslint comments
