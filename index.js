@@ -28,6 +28,7 @@ module.exports = {
   plugins: [
     'dependencies',
     'eslint-comments',
+    'github',
     'import',
     'jest',
     'jsdoc',
@@ -163,6 +164,15 @@ module.exports = {
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
+    // eslint-plugin-github - https://github.com/github/eslint-plugin-github/tree/master/docs/rules
+    'github/array-foreach': 'warn',
+    'github/async-currenttarget': 'error',
+    'github/async-preventdefault': 'error',
+    'github/get-attribute': 'error',
+    'github/js-class-name': 'warn',
+    'github/no-blur': 'error',
+    'github/no-then': 'warn',
+    'github/unescaped-html-literal': 'error',
   },
   settings: {
     jsdoc: {
