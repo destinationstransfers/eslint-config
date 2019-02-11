@@ -142,6 +142,11 @@ module.exports = {
     'unicorn/prefer-starts-ends-with': 'error',
     'unicorn/prefer-type-error': 'error',
     'unicorn/no-unused-properties': 'warn',
+    // 'unicorn/prefer-node-remove': 'error',
+    // 'unicorn/prefer-text-content': 'error',
+    'unicorn/custom-error-definition': 'error',
+    'unicorn/error-message': 'error',
+    'unicorn/prefer-exponentiation-operator': 'error',
     'unicorn/catch-error-name': [
       'error',
       {

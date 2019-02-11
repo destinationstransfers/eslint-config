@@ -33,7 +33,7 @@
   "dependencies": {
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-dependencies": "^2.4.0",
-    "eslint-plugin-eslint-comments": "^3.0.1",
+    "eslint-plugin-eslint-comments": "^3.1.0",
     "eslint-plugin-github": "^1.8.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.2.2",
