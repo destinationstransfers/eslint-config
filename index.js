@@ -78,6 +78,7 @@ module.exports = {
     'no-throw-literal': 'error',
     'no-restricted-globals': 'off',
     'spaced-comment': 'off',
+    'no-shadow': ['error', { builtinGlobals: true }],
     camelcase: 'off',
     'no-continue': 'off',
     // presentation
