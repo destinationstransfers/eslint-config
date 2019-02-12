@@ -73,12 +73,160 @@ module.exports = {
     'no-extra-bind': 'error',
     'no-sync': 'warn',
     'no-confusing-arrow': 'off',
-    'require-await': 'error',
     'no-restricted-syntax': 'off',
     'no-throw-literal': 'error',
     'no-restricted-globals': 'off',
     'spaced-comment': 'off',
-    'no-shadow': ['error', { builtinGlobals: true }],
+    'no-else-return': ['error', { allowElseIf: false }],
+    'no-extend-native': 'error',
+    'no-shadow': [
+      'error',
+      {
+        builtinGlobals: true,
+        allow: ['name', 'html', 'test', 'close', 'open', 'status'],
+      },
+    ],
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: [
+          'acc', // for reduce accumulators
+          'accumulator', // for reduce accumulators
+          'e', // for e.returnvalue
+          'ctx', // for Koa routing
+          'req', // for Express requests
+          'request', // for Express requests
+          'res', // for Express responses
+          'response', // for Express responses
+          '$scope', // for Angular 1 scopes
+        ],
+      },
+    ],
+    // disallow certain object properties
+    // https://eslint.org/docs/rules/no-restricted-properties
+    'no-restricted-properties': [
+      'error',
+      {
+        object: 'arguments',
+        property: 'callee',
+        message: 'arguments.callee is deprecated',
+      },
+      {
+        object: 'global',
+        property: 'isFinite',
+        message: 'Please use Number.isFinite instead',
+      },
+      {
+        object: 'self',
+        property: 'isFinite',
+        message: 'Please use Number.isFinite instead',
+      },
+      {
+        object: 'window',
+        property: 'isFinite',
+        message: 'Please use Number.isFinite instead',
+      },
+      {
+        object: 'global',
+        property: 'isNaN',
+        message: 'Please use Number.isNaN instead',
+      },
+      {
+        object: 'self',
+        property: 'isNaN',
+        message: 'Please use Number.isNaN instead',
+      },
+      {
+        object: 'window',
+        property: 'isNaN',
+        message: 'Please use Number.isNaN instead',
+      },
+      {
+        property: '__defineGetter__',
+        message: 'Please use Object.defineProperty instead.',
+      },
+      {
+        property: '__defineSetter__',
+        message: 'Please use Object.defineProperty instead.',
+      },
+      {
+        object: 'Math',
+        property: 'pow',
+        message: 'Use the exponentiation operator (**) instead.',
+      },
+    ],
+    // disallow modifying variables that are declared using const
+    'no-const-assign': 'error',
+    // disallow duplicate class members
+    // https://eslint.org/docs/rules/no-dupe-class-members
+    'no-dupe-class-members': 'error',
+    // disallow importing from the same path more than once
+    // https://eslint.org/docs/rules/no-duplicate-imports
+    // replaced by https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+    'no-duplicate-imports': 'off',
+    // require use of the second argument for parseInt()
+    radix: 'error',
+    // require `await` in `async function` (note: this is a horrible rule that should never be used)
+    // https://eslint.org/docs/rules/require-await
+    'require-await': 'off',
+    // disallow unnecessary string escaping
+    // https://eslint.org/docs/rules/no-useless-escape
+    'no-useless-escape': 'error',
+    // require let or const instead of var
+    'no-var': 'error',
+
+    // require method and property shorthand syntax for object literals
+    // https://eslint.org/docs/rules/object-shorthand
+    'object-shorthand': [
+      'error',
+      'always',
+      {
+        ignoreConstructors: false,
+        avoidQuotes: true,
+      },
+    ],
+    // suggest using arrow functions as callbacks
+    'prefer-arrow-callback': [
+      'error',
+      {
+        allowNamedFunctions: false,
+        allowUnboundThis: true,
+      },
+    ],
+
+    // suggest using of const declaration for variables that are never modified after declared
+    'prefer-const': [
+      'error',
+      {
+        destructuring: 'any',
+        ignoreReadBeforeAssign: true,
+      },
+    ],
+    // Prefer destructuring from arrays and objects
+    // https://eslint.org/docs/rules/prefer-destructuring
+    'prefer-destructuring': [
+      'error',
+      {
+        VariableDeclarator: {
+          array: false,
+          object: true,
+        },
+        AssignmentExpression: {
+          array: true,
+          object: true,
+        },
+      },
+      {
+        enforceForRenamedProperties: false,
+      },
+    ],
+    // use rest parameters instead of arguments
+    // https://eslint.org/docs/rules/prefer-rest-params
+    'prefer-rest-params': 'error',
+    // suggest using the spread operator instead of .apply()
+    // https://eslint.org/docs/rules/prefer-spread
+    'prefer-spread': 'error',
     camelcase: 'off',
     'no-continue': 'off',
     // presentation
@@ -162,6 +310,7 @@ module.exports = {
     'import/named': 'error',
     'import/default': 'error',
     'import/no-default-export': 'warn',
+    'import/no-duplicates': 'error',
 
     'dependencies/no-cycles': 'error',
     'dependencies/case-sensitive': 'error',
