@@ -317,6 +317,7 @@ module.exports = {
     'github/no-blur': 'error',
     'github/no-then': 'warn',
     'github/unescaped-html-literal': 'error',
+    'github/no-edge-destructure-bug': 'error',
   },
   settings: {
     jsdoc: {
