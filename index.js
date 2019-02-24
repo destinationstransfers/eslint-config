@@ -243,10 +243,10 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
+        tabWidth: 2,
         singleQuote: true,
         trailingComma: 'all',
         bracketSpacing: true,
-        jsxBracketSameLine: true,
       },
     ],
     // eslint-plugin-jsdoc - https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-configuration
