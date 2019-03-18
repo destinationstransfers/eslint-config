@@ -253,7 +253,7 @@ module.exports = {
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-tag-names': 'error',
     'jsdoc/newline-after-description': ['warn', 'always'],
-    'jsdoc/no-undefined-types': 'warn',
+    'jsdoc/no-undefined-types': 'off', // doesn't know typescript
     'jsdoc/require-description': 'off',
     'jsdoc/require-description-complete-sentence': 'off',
     'jsdoc/require-example': 'off',
@@ -264,9 +264,9 @@ module.exports = {
     'jsdoc/require-param-type': 'error',
     'jsdoc/require-returns-description': 'off',
     'jsdoc/require-returns-type': 'error',
-    'jsdoc/require-returns-check': 'warn',
+    'jsdoc/require-returns-check': 'error',
     'jsdoc/check-types': 'warn',
-    'jsdoc/valid-types': 'warn',
+    'jsdoc/valid-types': 'off', // doesn't understand typescript types
     // lit-html rules for html`<body></body> template literals - https://github.com/43081j/eslint-plugin-lit
     'lit/no-duplicate-template-bindings': 'error',
     'lit/no-template-bind': 'error',
