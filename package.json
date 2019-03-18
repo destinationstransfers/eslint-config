@@ -14,9 +14,9 @@
     "mocha": "6.0.2"
   },
   "scripts": {
-    "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c config.js",
+    "test:itself": "eslint *.js --no-eslintrc --parser-options=sourceType:script --env=node -c ./config.js",
     "test:prettier": "eslint --print-config . | eslint-config-prettier-check",
-    "test": "npm run test:itself && npm run test:prettier && mocha local-rules/*.test.js",
+    "test": "npm run test:itself && npm run test:prettier && mocha rules/*.test.js",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
   },
   "files": [
@@ -51,16 +51,5 @@
     "eslint-plugin-unicorn": "^7.1.0",
     "is-html": "^1.1.0",
     "prettier": "^1.16.4"
-  },
-  "eslintConfig": {
-    "extends": [
-      "./config.js"
-    ],
-    "env": {
-      "node": true
-    },
-    "parserOptions": {
-      "sourceType": "script"
-    }
   }
 }

@@ -39,7 +39,6 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
-    '@destinationstransfers'
   ],
   rules: {
     // code quality
@@ -309,8 +308,6 @@ module.exports = {
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
-    // custom rules
-    'local-rules/unescaped-html-literal': 'error',
   },
   settings: {
     jsdoc: {

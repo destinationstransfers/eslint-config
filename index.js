@@ -3,6 +3,12 @@
 module.exports = {
   rules: require('./rules'),
   configs: {
-    recommended: require('./config'),
+    recommended: {
+      extends: ['./config.js'],
+      rules: {
+        // custom rules
+        '@destinationstransfers/unescaped-html-literal': 'error',
+      },
+    },
   },
 };
