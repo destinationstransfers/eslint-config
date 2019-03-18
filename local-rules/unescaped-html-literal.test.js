@@ -16,6 +16,10 @@ ruleTester.run('unescaped-html-literal', rule, {
       code: 'const foo = "<svg></svg>"',
       parserOptions: { ecmaVersion: 2017 },
     },
+    {
+      code: 'const foo = "<XMLSChema><someXml></someXml></XMLSChema>"',
+      parserOptions: { ecmaVersion: 2017 },
+    },
   ],
 
   invalid: [

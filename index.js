@@ -39,7 +39,7 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
-    'destr',
+    'local-rules',
   ],
   rules: {
     // code quality
@@ -310,7 +310,7 @@ module.exports = {
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
     // custom rules
-    'destr/unescaped-html-literal': 'error',
+    'local-rules/unescaped-html-literal': 'error',
   },
   settings: {
     jsdoc: {
