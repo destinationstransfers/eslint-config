@@ -1,0 +1,8 @@
+{
+  "name": "eslint-plugin-destr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "is-html": "^1.1.0"
+  }
+}

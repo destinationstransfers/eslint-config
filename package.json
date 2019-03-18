@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-config",
-  "version": "6.4.4",
+  "version": "7.0.0",
   "description": "Shareable ESLint config for our repos",
   "main": "index.js",
   "engines": {
@@ -10,15 +10,17 @@
     "eslint": "^5.13.0"
   },
   "devDependencies": {
-    "eslint": "5.15.2"
+    "eslint": "5.15.2",
+    "mocha": "^6.0.2"
   },
   "scripts": {
     "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c index.js",
     "test:prettier": "eslint --print-config . | eslint-config-prettier-check",
-    "test": "npm run test:itself && npm run test:prettier"
+    "test": "npm run test:itself && npm run test:prettier && mocha eslint-plugin-destr/*.test.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "eslint-plugin-destr"
   ],
   "repository": {
     "type": "git",
@@ -31,13 +33,13 @@
   },
   "homepage": "https://github.com/destinationstransfers/eslint-config#readme",
   "dependencies": {
-    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-dependencies": "^2.4.0",
+    "eslint-plugin-destr": "file:eslint-plugin-destr",
     "eslint-plugin-eslint-comments": "^3.1.1",
-    "eslint-plugin-github": "^2.0.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.3.0",
-    "eslint-plugin-jsdoc": "^4.1.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-jsdoc": "^4.4.2",
     "eslint-plugin-lit": "^0.6.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-optimize-regex": "latest",
