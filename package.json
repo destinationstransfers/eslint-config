@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-config",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "Shareable ESLint config for our repos",
   "main": "index.js",
   "engines": {
@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "eslint": "5.15.2",
-    "mocha": "^6.0.2"
+    "mocha": "6.0.2"
   },
   "scripts": {
     "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c index.js",
