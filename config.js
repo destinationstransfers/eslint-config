@@ -39,6 +39,7 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
+    '@destinationstransfers'
   ],
   rules: {
     // code quality

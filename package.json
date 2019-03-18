@@ -14,14 +14,14 @@
     "mocha": "6.0.2"
   },
   "scripts": {
-    "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c index.js",
+    "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c config.js",
     "test:prettier": "eslint --print-config . | eslint-config-prettier-check",
     "test": "npm run test:itself && npm run test:prettier && mocha local-rules/*.test.js",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
   },
   "files": [
     "index.js",
-    "rules.js",
+    "rules",
     "config.js"
   ],
   "repository": {
@@ -54,7 +54,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "./index.js"
+      "./config.js"
     ],
     "env": {
       "node": true
