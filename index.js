@@ -28,7 +28,6 @@ module.exports = {
   plugins: [
     'dependencies',
     'eslint-comments',
-    'github',
     'import',
     'jest',
     'jsdoc',
@@ -40,6 +39,7 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
+    'destr',
   ],
   rules: {
     // code quality
@@ -235,6 +235,7 @@ module.exports = {
     'jest/no-disabled-tests': 'off', // will allow test.skip
     'jest/prefer-spy-on': 'off', // buggy
     'jest/no-identical-title': 'error',
+    'jest/no-empty-title': 'error',
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
     'jest/valid-expect': 'error',
@@ -298,7 +299,7 @@ module.exports = {
     'import/no-cycle': 'error',
     'import/named': 'error',
     'import/default': 'error',
-    'import/no-default-export': 'warn',
+    'import/no-default-export': 'off',
     'import/no-duplicates': 'error',
 
     'dependencies/no-cycles': 'error',
@@ -308,16 +309,8 @@ module.exports = {
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
-    // eslint-plugin-github - https://github.com/github/eslint-plugin-github/tree/master/docs/rules
-    'github/array-foreach': 'warn',
-    'github/async-currenttarget': 'error',
-    'github/async-preventdefault': 'error',
-    'github/get-attribute': 'error',
-    'github/js-class-name': 'warn',
-    'github/no-blur': 'error',
-    'github/no-then': 'warn',
-    'github/unescaped-html-literal': 'error',
-    'github/no-edge-destructure-bug': 'error',
+    // custom rules
+    'destr/unescaped-html-literal': 'error',
   },
   settings: {
     jsdoc: {
