@@ -16,11 +16,12 @@
   "scripts": {
     "test:itself": "eslint *.js --parser-options=sourceType:script --env=node -c index.js",
     "test:prettier": "eslint --print-config . | eslint-config-prettier-check",
-    "test": "npm run test:itself && npm run test:prettier && mocha eslint-plugin-destr/*.test.js"
+    "test": "npm run test:itself && npm run test:prettier && mocha eslint-plugin-destr/*.test.js",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
   },
   "files": [
     "index.js",
-    "package-lock.json",
+    "yarn.lock",
     "eslint-plugin-destr"
   ],
   "repository": {
@@ -36,7 +37,7 @@
   "dependencies": {
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-dependencies": "^2.4.0",
-    "eslint-plugin-destr": "file:./eslint-plugin-destr",
+    "eslint-plugin-destr": "file:eslint-plugin-destr",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.4.1",
