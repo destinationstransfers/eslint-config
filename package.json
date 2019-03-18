@@ -20,9 +20,8 @@
   },
   "files": [
     "index.js",
-    "eslint-plugin-destr/index.js",
-    "eslint-plugin-destr/package.json",
-    "eslint-plugin-destr/unescaped-html-literal.js"
+    "package-lock.json",
+    "eslint-plugin-destr"
   ],
   "repository": {
     "type": "git",
