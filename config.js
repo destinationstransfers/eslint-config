@@ -39,7 +39,6 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
-    'local-rules',
   ],
   rules: {
     // code quality
