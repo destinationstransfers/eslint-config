@@ -317,7 +317,7 @@ module.exports = {
     // sort-class-members - https://github.com/bryanrsmith/eslint-plugin-sort-class-members
     'sort-class-members/sort-class-members': 'warn',
     // good practices - https://github.com/Rahul9046/eslint-plugin-good-practices
-    'good-practices/no-function-dependency': 'warn',
+    'good-practices/no-function-dependency': 'off', // https://github.com/Rahul9046/eslint-plugin-good-practices/issues/37
     'good-practices/no-single-usage-variable': 'warn',
     'good-practices/no-static-strings-in-scope': 'warn',
   },
