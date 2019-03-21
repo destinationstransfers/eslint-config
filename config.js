@@ -39,7 +39,6 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
-    'sort-class-members',
   ],
   rules: {
     // code quality
@@ -313,22 +312,6 @@ module.exports = {
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
-    // sort-class-members - https://github.com/bryanrsmith/eslint-plugin-sort-class-members
-    'sort-class-members/sort-class-members': [
-      'warn',
-      {
-        order: [
-          '[static-properties]',
-          '[static-methods]',
-          '[properties]',
-          '[conventional-private-properties]',
-          'constructor',
-          '[methods]',
-          '[conventional-private-methods]',
-        ],
-        accessorPairPositioning: 'getThenSet',
-      },
-    ],
   },
   settings: {
     jsdoc: {
