@@ -39,6 +39,8 @@ module.exports = {
     'sonarjs',
     'sort-requires',
     'unicorn',
+    'sort-class-members',
+    'good-practices',
   ],
   rules: {
     // code quality
@@ -274,7 +276,7 @@ module.exports = {
     'lit/no-useless-template-literals': 'error',
     'lit/attribute-value-entities': 'error',
     'lit/no-invalid-html': 'error',
-    // unicorn - https://www.npmjs.com/package/eslint-plugin-unicorn
+    // unicorn - https://github.com/sindresorhus/eslint-plugin-unicorn
     'unicorn/throw-new-error': 'error',
     'unicorn/no-new-buffer': 'error',
     'unicorn/prefer-starts-ends-with': 'error',
@@ -291,6 +293,10 @@ module.exports = {
         name: 'err',
       },
     ],
+    // unpublished yet
+    // 'unicorn/prefer-includes': 'error',
+    // 'unicorn/no-for-loop': 'error',
+
     // others
     'node/no-unpublished-require': 'warn',
 
@@ -308,6 +314,12 @@ module.exports = {
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
+    // sort-class-members - https://github.com/bryanrsmith/eslint-plugin-sort-class-members
+    'sort-class-members/sort-class-members': 'warn',
+    // good practices - https://github.com/Rahul9046/eslint-plugin-good-practices
+    'good-practices/no-function-dependency': 'warn',
+    'good-practices/no-single-usage-variable': 'warn',
+    'good-practices/no-static-strings-in-scope': 'warn',
   },
   settings: {
     jsdoc: {
