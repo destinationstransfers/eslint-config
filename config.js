@@ -316,7 +316,7 @@ module.exports = {
   settings: {
     jsdoc: {
       additionalTagNames: {
-        customTags: ['template', 'constructor', 'extends'],
+        customTags: ['constructor', 'extends'],
       },
       allowOverrideWithoutParam: true,
       allowImplementsWithoutParam: true,
