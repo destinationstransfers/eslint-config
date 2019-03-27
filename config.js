@@ -291,9 +291,11 @@ module.exports = {
         name: 'err',
       },
     ],
-    // unpublished yet
-    // 'unicorn/prefer-includes': 'error',
-    // 'unicorn/no-for-loop': 'error',
+    'unicorn/prefer-includes': 'error',
+    'unicorn/no-for-loop': 'error',
+    'unicorn/no-zero-fractions': 'error',
+    'unicorn/prefer-text-content': 'error',
+    'unicorn/prefer-node-remove': 'error',
 
     // others
     'node/no-unpublished-require': 'warn',
@@ -316,7 +318,7 @@ module.exports = {
   settings: {
     jsdoc: {
       additionalTagNames: {
-        customTags: ['template', 'constructor', 'extends'],
+        customTags: ['constructor', 'extends'],
       },
       allowOverrideWithoutParam: true,
       allowImplementsWithoutParam: true,
