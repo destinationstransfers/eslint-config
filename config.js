@@ -217,15 +217,6 @@ module.exports = {
     camelcase: 'off',
     'no-continue': 'off',
     // presentation
-    'sort-imports': [
-      'error',
-      {
-        ignoreCase: false,
-        ignoreMemberSort: false,
-        ignoreDeclarationSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      },
-    ],
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
     'sort-vars': ['error', { ignoreCase: true }],
     'no-underscore-dangle': 'off', // MongoDB is hard with it
@@ -312,6 +303,15 @@ module.exports = {
       { marko: 'always', json: 'always', jsx: 'always', mjs: 'always' },
     ],
     'import/first': 'error',
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreMemberSort: true,
+        ignoreDeclarationSort: true,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      },
+    ],
     'import/order': [
       'error',
       {
