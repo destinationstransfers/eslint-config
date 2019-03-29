@@ -37,7 +37,6 @@ module.exports = {
     'prettier',
     'promise',
     'sonarjs',
-    'sort-requires',
     'unicorn',
   ],
   rules: {
@@ -218,12 +217,12 @@ module.exports = {
     camelcase: 'off',
     'no-continue': 'off',
     // presentation
-    'sort-requires/sort-requires': 'error',
     'sort-imports': [
       'error',
       {
         ignoreCase: false,
         ignoreMemberSort: false,
+        ignoreDeclarationSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       },
     ],
@@ -301,16 +300,32 @@ module.exports = {
     'node/no-unpublished-require': 'warn',
 
     'import/no-extraneous-dependencies': 'warn',
-    'import/no-cycle': 'error',
+    'import/no-cycle': 'off',
     'import/named': 'error',
     'import/default': 'error',
     'import/no-default-export': 'off',
     'import/no-duplicates': 'error',
+    'import/export': 'error',
+    'import/extensions': [
+      'error',
+      'never',
+      { marko: 'always', json: 'always', jsx: 'always', mjs: 'always' },
+    ],
+    'import/first': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'parent', 'index', 'sibling'],
+        'newlines-between': 'always',
+      },
+    ],
+    'import/newline-after-import': ['error', { count: 1 }],
+    'import/no-absolute-path': 'error',
 
     'dependencies/no-cycles': 'error',
     'dependencies/case-sensitive': 'error',
     'dependencies/no-unresolved': 'error',
-    'dependencies/require-json-ext': 'off',
+    'dependencies/require-json-ext': 'error', // for typescript
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
