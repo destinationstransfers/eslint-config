@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-plugin",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Shareable ESLint config/plugin for our repos",
   "main": "index.js",
   "engines": {
@@ -12,7 +12,7 @@
   "devDependencies": {
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
-    "mocha": "6.1.0"
+    "mocha": "6.1.1"
   },
   "scripts": {
     "test:itself": "eslint *.js --no-eslintrc --parser-options=sourceType:script --env=node -c ./config.js",
