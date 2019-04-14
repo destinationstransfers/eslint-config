@@ -66,12 +66,20 @@ module.exports = {
     'arrow-parens': 'off',
     'guard-for-in': 'off',
     'no-console': 'off',
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: `CallExpression[callee.object.name='console'][callee.property.name!=/^(${Object.keys(
+          console,
+        ).join('|')})$/]`,
+        message: 'Unexpected property on console object was called',
+      },
+    ],
     'no-plusplus': 'off',
     'valid-jsdoc': 'off',
     'no-extra-bind': 'error',
     'no-sync': 'warn',
     'no-confusing-arrow': 'off',
-    'no-restricted-syntax': 'off',
     'no-throw-literal': 'error',
     'no-restricted-globals': 'off',
     'spaced-comment': 'off',
