@@ -229,6 +229,13 @@ module.exports = {
     'jest/prefer-to-be-undefined': 'error',
     'jest/valid-expect': 'error',
     'jest/prefer-to-contain': 'error',
+    'jest/consistent-test-it': ['error', { fn: 'test', withinDescribe: 'it' }],
+    'jest/expect-expect': [
+      'error',
+      { assertFunctionNames: ['expect', 'request'] },
+    ],
+    'jest/no-test-return-statement': 'error',
+    'jest/prefer-todo': 'error',
     // Prettier
     'prettier/prettier': [
       'error',
