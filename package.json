@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-plugin",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "description": "Shareable ESLint config/plugin for our repos",
   "main": "index.js",
   "engines": {
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/destinationstransfers/eslint-plugin#readme",
   "dependencies": {
-    "eslint-config-prettier": "4.1.0",
+    "eslint-config-prettier": "4.2.0",
     "eslint-plugin-dependencies": "2.4.0",
     "eslint-plugin-eslint-comments": "3.1.1",
     "eslint-plugin-import": "2.17.2",
