@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-plugin",
-  "version": "2.3.5",
+  "version": "2.3.6",
   "description": "Shareable ESLint config/plugin for our repos",
   "main": "index.js",
   "engines": {
@@ -41,7 +41,7 @@
     "eslint-plugin-eslint-comments": "3.1.1",
     "eslint-plugin-import": "2.17.2",
     "eslint-plugin-jest": "22.5.1",
-    "eslint-plugin-jsdoc": "4.8.3",
+    "eslint-plugin-jsdoc": "4.8.4",
     "eslint-plugin-lit": "0.6.0",
     "eslint-plugin-node": "8.0.1",
     "eslint-plugin-optimize-regex": "1.1.6",
