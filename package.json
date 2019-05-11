@@ -4,15 +4,16 @@
   "description": "Shareable ESLint config/plugin for our repos",
   "main": "index.js",
   "engines": {
-    "node": ">=8.2"
+    "node": ">=10.2"
   },
   "peerDependencies": {
-    "eslint": "^5.13.0"
+    "eslint": "^5.16.0"
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
-    "mocha": "6.1.4"
+    "mocha": "6.1.4",
+    "mocha-junit-reporter": "1.22.0"
   },
   "scripts": {
     "test:itself": "eslint *.js --no-eslintrc --parser-options=sourceType:script --env=node -c ./config.js",

@@ -17,11 +17,20 @@ steps:
 
 - script: |
     npm install
-    npm test
+    npm run test:itself
+    npm run test:prettier
+    npx mocha rules/*.test.js --reporter mocha-junit-reporter
   displayName: 'npm install and test'
+
 
 - task: Npm@1
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   inputs:
     command: publish
     publishEndpoint: NPM
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/test-results.xml'
