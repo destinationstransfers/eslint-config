@@ -19,3 +19,9 @@ steps:
     npm install
     npm test
   displayName: 'npm install and test'
+
+- task: Npm@1
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  inputs:
+    command: publish
+    publishEndpoint: NPM
