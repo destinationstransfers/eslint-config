@@ -45,7 +45,6 @@ module.exports = {
     // sonar complexity is greater than eslint
     'sonarjs/cognitive-complexity': ['error', 30],
     'sonarjs/no-duplicate-string': 'warn',
-    'node/exports-style': ['warn', 'module.exports'],
     'max-lines': [
       'warn',
       { max: 600, skipComments: true, skipBlankLines: true },
@@ -228,6 +227,12 @@ module.exports = {
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
     'sort-vars': ['error', { ignoreCase: true }],
     'no-underscore-dangle': 'off', // MongoDB is hard with it
+    // eslint-plugin-node - https://github.com/mysticatea/eslint-plugin-node/
+    'node/exports-style': ['warn', 'module.exports'],
+    'node/prefer-promises/dns': ['error'],
+    'node/prefer-promises/fs': ['error'],
+    'node/prefer-global/url': ['error', 'always'],
+    'node/prefer-global/url-search-params': ['error', 'always'],
     // jest
     'jest/no-disabled-tests': 'off', // will allow test.skip
     'jest/prefer-spy-on': 'off', // buggy
