@@ -258,6 +258,7 @@ module.exports = {
         trailingComma: 'all',
         bracketSpacing: true,
       },
+      { usePrettierrc: false },
     ],
     // eslint-plugin-jsdoc - https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-configuration
     'jsdoc/check-param-names': 'error',
