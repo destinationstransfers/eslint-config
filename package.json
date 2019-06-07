@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-plugin",
-  "version": "2.4.17",
+  "version": "2.4.18",
   "description": "Shareable ESLint config/plugin for our repos",
   "main": "index.js",
   "engines": {
@@ -53,6 +53,6 @@
     "eslint-plugin-sonarjs": "0.4.0",
     "eslint-plugin-unicorn": "9.0.0",
     "is-html": "2.0.0",
-    "prettier": "1.18.0"
+    "prettier": "1.18.2"
   }
 }
