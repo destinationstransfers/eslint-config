@@ -26,7 +26,6 @@ module.exports = {
     ecmaVersion: 2018,
   },
   plugins: [
-    'dependencies',
     'eslint-comments',
     'import',
     'jest',
@@ -343,10 +342,6 @@ module.exports = {
     'import/newline-after-import': ['error', { count: 1 }],
     'import/no-absolute-path': 'error',
 
-    'dependencies/no-cycles': 'error',
-    'dependencies/case-sensitive': 'error',
-    'dependencies/no-unresolved': 'error',
-    'dependencies/require-json-ext': 'error', // for typescript
     // eslint comments
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/disable-enable-pair': 'off',
