@@ -10,6 +10,7 @@
     "eslint": "^5.16.0 || ^6.0.0"
   },
   "devDependencies": {
+    "@types/node": "12.0.10",
     "babel-eslint": "10.0.2",
     "eslint": "6.0.0",
     "eslint-find-rules": "3.3.1",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "test:itself": "eslint *.js --no-eslintrc --parser-options=sourceType:script --env=node -c ./config.js",
-    "test:prettier": "eslint --print-config . | eslint-config-prettier-check",
+    "test:prettier": "eslint --print-config config.js | eslint-config-prettier-check",
     "test": "npm run test:itself && npm run test:prettier && mocha rules/*.test.js",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "find-option-rules": "eslint-find-rules -d -u ./config.js"
