@@ -1,6 +1,7 @@
 'use strict';
 
 const rule = require('./prefer-class-properties');
+
 const { RuleTester } = require('eslint');
 
 const ruleTester = new RuleTester();
@@ -29,27 +30,27 @@ ruleTester.run('prefer-class-properties', rule, {
   valid: [
     {
       code: 'class Foo { foo = "bar"; }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['always'],
     },
     {
       code: 'class Foo { foo = bar(); }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['always'],
     },
     {
       code: 'class Foo { foo = 123; }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['always'],
     },
     {
       code: 'class Foo { static foo = "bar"; }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['never'],
     },
     {
       code: 'class Foo { static foo = "bar"; }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['always'],
     },
     {
@@ -148,19 +149,19 @@ ruleTester.run('prefer-class-properties', rule, {
   invalid: [
     {
       code: 'class Foo { foo = "bar"; }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['never'],
       errors: classPropErrors,
     },
     {
       code: 'class Foo { foo = bar(); }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['never'],
       errors: classPropErrors,
     },
     {
       code: 'class Foo { foo = 123; }',
-      parser: 'babel-eslint',
+      parser: require.resolve('babel-eslint'),
       options: ['never'],
       errors: classPropErrors,
     },
