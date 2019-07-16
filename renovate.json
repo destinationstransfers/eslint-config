@@ -14,5 +14,13 @@
     "requiredStatusChecks": null,
     "automerge": true
   },
-  "bumpVersion": "patch"
+  "vulnerabilityAlerts": {
+    "labels": ["dependencies", "security"]
+  },
+  "packageRules": [
+    {
+      "depTypeList": ["dependencies"],
+      "bumpVersion": "patch"
+    }
+  ]
 }
