@@ -1,9 +1,6 @@
 name: Node.js Package
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
     branches:
       - master
@@ -28,7 +25,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm publish
+          scope: "@destinationstransfers"
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -41,7 +39,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@destinationstransfers'
-      - run: npm publish
+          scope: "@destinationstransfers"
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
