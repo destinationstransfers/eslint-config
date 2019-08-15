@@ -24,9 +24,6 @@
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "find-option-rules": "eslint-find-rules -d -u ./config.js"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "files": [
     "index.js",
     "rules",
