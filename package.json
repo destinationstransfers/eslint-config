@@ -10,7 +10,7 @@
     "eslint": "^6.1.0"
   },
   "devDependencies": {
-    "@types/node": "12.7.3",
+    "@types/node": "12.7.4",
     "babel-eslint": "10.0.3",
     "eslint": "6.3.0",
     "eslint-find-rules": "3.4.0",
