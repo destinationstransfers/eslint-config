@@ -1,15 +1,19 @@
-'use strict';
+/**
+ * @jest-environment node
+ */
 
-const rule = require('./prefer-class-properties');
+'use strict';
 
 const { RuleTester } = require('eslint');
 
+const rule = require('./prefer-class-properties');
+
 const ruleTester = new RuleTester();
 
-require('babel-eslint');
+require('@typescript-eslint/parser');
 
 const parserOptions = {
-  ecmaVersion: 6,
+  ecmaVersion: 2020,
 };
 
 const classPropErrors = [
@@ -30,27 +34,27 @@ ruleTester.run('prefer-class-properties', rule, {
   valid: [
     {
       code: 'class Foo { foo = "bar"; }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['always'],
     },
     {
       code: 'class Foo { foo = bar(); }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['always'],
     },
     {
       code: 'class Foo { foo = 123; }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['always'],
     },
     {
       code: 'class Foo { static foo = "bar"; }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['never'],
     },
     {
       code: 'class Foo { static foo = "bar"; }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['always'],
     },
     {
@@ -149,19 +153,19 @@ ruleTester.run('prefer-class-properties', rule, {
   invalid: [
     {
       code: 'class Foo { foo = "bar"; }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['never'],
       errors: classPropErrors,
     },
     {
       code: 'class Foo { foo = bar(); }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['never'],
       errors: classPropErrors,
     },
     {
       code: 'class Foo { foo = 123; }',
-      parser: require.resolve('babel-eslint'),
+      parser: require.resolve('@typescript-eslint/parser'),
       options: ['never'],
       errors: classPropErrors,
     },
