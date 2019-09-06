@@ -368,6 +368,11 @@ module.exports = {
         'no-unused-vars': 'warn',
         // it's ok to write very long integration tests
         'max-statements': 'off',
+        // allow jest-environment
+        'jsdoc/check-tag-names': [
+          'error',
+          { definedTags: ['jest-environment'] },
+        ],
       },
     },
   ],
