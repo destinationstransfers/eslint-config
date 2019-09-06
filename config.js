@@ -23,7 +23,7 @@ module.exports = {
     'jest/globals': true,
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
   },
   plugins: [
     'eslint-comments',
@@ -58,6 +58,7 @@ module.exports = {
     ],
     'optimize-regex/optimize-regex': 'warn',
     'no-unused-vars': ['error', { ignoreRestSiblings: true }],
+    'no-empty': ['error', { allowEmptyCatch: true }],
     // language features
     'accessor-pairs': ['error', { setWithoutGet: true }],
     'getter-return': 'error',
