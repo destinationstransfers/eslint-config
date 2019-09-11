@@ -10,7 +10,7 @@
     "eslint": "^6.3.0"
   },
   "devDependencies": {
-    "@types/node": "12.7.4",
+    "@types/node": "12.7.5",
     "@typescript-eslint/parser": "2.2.0",
     "eslint": "6.3.0",
     "eslint-find-rules": "3.4.0",
