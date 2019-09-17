@@ -64,6 +64,7 @@ module.exports = {
     'getter-return': 'error',
     'arrow-parens': 'off',
     'guard-for-in': 'off',
+    'prefer-regex-literals': 'error',
     'no-console': 'off',
     'no-restricted-syntax': [
       'error',
@@ -291,8 +292,6 @@ module.exports = {
     'unicorn/prefer-starts-ends-with': 'error',
     'unicorn/prefer-type-error': 'error',
     'unicorn/no-unused-properties': 'warn',
-    // 'unicorn/prefer-node-remove': 'error',
-    // 'unicorn/prefer-text-content': 'error',
     'unicorn/custom-error-definition': 'error',
     'unicorn/error-message': 'error',
     'unicorn/prefer-exponentiation-operator': 'error',
@@ -307,6 +306,9 @@ module.exports = {
     'unicorn/no-zero-fractions': 'error',
     'unicorn/prefer-text-content': 'error',
     'unicorn/prefer-node-remove': 'error',
+    'unicorn/prefer-dataset': 'error',
+    'unicorn/prefer-reflect-apply': 'error',
+    'unicorn/consistent-function-scoping': 'error',
 
     // others
     'node/no-unpublished-require': 'warn',
