@@ -12,9 +12,9 @@ const ruleTester = new RuleTester();
 
 require('@typescript-eslint/parser');
 
-const parserOptions = {
+const parserOptions = /** @type {import('eslint').Linter.ParserOptions} */ ({
   ecmaVersion: 2020,
-};
+});
 
 const classPropErrors = [
   {
