@@ -378,5 +378,16 @@ module.exports = {
         ],
       },
     },
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'node/no-missing-import': [
+          'error',
+          {
+            tryExtensions: ['.js', '.json', '.ts', '.tsx'],
+          },
+        ],
+      },
+    },
   ],
 };
