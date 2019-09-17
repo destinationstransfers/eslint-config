@@ -1,6 +1,6 @@
 {
   "name": "@destinationstransfers/eslint-plugin",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "Shareable ESLint config/plugin for our repos",
   "main": "index.js",
   "engines": {
