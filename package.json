@@ -12,7 +12,7 @@
   "devDependencies": {
     "@types/eslint": "6.1.2",
     "@types/node": "12.7.11",
-    "@typescript-eslint/parser": "2.3.2",
+    "@typescript-eslint/parser": "2.3.3",
     "eslint": "6.5.1",
     "eslint-find-rules": "3.4.0",
     "mocha": "6.2.1",
