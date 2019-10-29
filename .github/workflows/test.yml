@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Linting Rules
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
