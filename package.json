@@ -7,7 +7,7 @@
     "node": ">=10.2"
   },
   "peerDependencies": {
-    "eslint": "^6.4.0"
+    "eslint": "^6.6.0"
   },
   "devDependencies": {
     "@types/eslint": "6.1.3",
