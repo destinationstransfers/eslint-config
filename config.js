@@ -238,7 +238,6 @@ module.exports = {
     'jest/no-disabled-tests': 'off', // will allow test.skip
     'jest/prefer-spy-on': 'off', // buggy
     'jest/no-identical-title': 'error',
-    'jest/no-empty-title': 'error',
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
     'jest/valid-expect': 'error',
