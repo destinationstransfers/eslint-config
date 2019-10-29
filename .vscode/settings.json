@@ -1,6 +1,5 @@
 {
   "deepscan.ignoreConfirmWarning": true,
-  "prettier.disableLanguages": [
-    "javascript"
-  ]
+  "prettier.disableLanguages": ["javascript"],
+  "eslint.autoFixOnSave": true
 }

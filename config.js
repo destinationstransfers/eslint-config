@@ -264,7 +264,7 @@ module.exports = {
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-tag-names': 'error',
     'jsdoc/newline-after-description': ['warn', 'always'],
-    'jsdoc/no-undefined-types': 'off', // doesn't know typescript
+    'jsdoc/no-undefined-types': 'off',
     'jsdoc/require-description': 'off',
     'jsdoc/require-description-complete-sentence': 'off',
     'jsdoc/require-example': 'off',
@@ -277,7 +277,7 @@ module.exports = {
     'jsdoc/require-returns-type': 'error',
     'jsdoc/require-returns-check': 'error',
     'jsdoc/check-types': 'warn',
-    'jsdoc/valid-types': 'off', // doesn't understand typescript types
+    'jsdoc/valid-types': 'error',
     // lit-html rules for html`<body></body> template literals - https://github.com/43081j/eslint-plugin-lit
     'lit/no-duplicate-template-bindings': 'error',
     'lit/no-template-bind': 'error',
@@ -350,9 +350,7 @@ module.exports = {
   },
   settings: {
     jsdoc: {
-      additionalTagNames: {
-        customTags: ['constructor', 'extends'],
-      },
+      mode: 'typescript',
       allowOverrideWithoutParam: true,
       allowImplementsWithoutParam: true,
       allowAugmentsExtendsWithoutParam: true,
