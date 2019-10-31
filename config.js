@@ -277,7 +277,7 @@ module.exports = {
     'jsdoc/require-returns-type': 'error',
     'jsdoc/require-returns-check': 'error',
     'jsdoc/check-types': 'warn',
-    'jsdoc/valid-types': 'error',
+    'jsdoc/valid-types': 'off', // not compatible with Typescript types
     // lit-html rules for html`<body></body> template literals - https://github.com/43081j/eslint-plugin-lit
     'lit/no-duplicate-template-bindings': 'error',
     'lit/no-template-bind': 'error',
