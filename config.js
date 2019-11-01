@@ -249,6 +249,7 @@ module.exports = {
     ],
     'jest/no-test-return-statement': 'error',
     'jest/prefer-todo': 'error',
+    'jest/no-test-callback': 'off',
     // Prettier
     'prettier/prettier': [
       'error',
