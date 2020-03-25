@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@types/eslint": "6.1.8",
-    "@types/node": "12.12.30",
+    "@types/node": "12.12.31",
     "@typescript-eslint/parser": "2.25.0",
     "eslint": "6.8.0",
     "eslint-find-rules": "3.4.0",
