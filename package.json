@@ -14,7 +14,7 @@
     "@types/node": "12.12.38",
     "@typescript-eslint/parser": "2.31.0",
     "eslint": "7.0.0",
-    "eslint-find-rules": "3.4.0",
+    "eslint-find-rules": "3.5.0",
     "mocha": "7.1.2",
     "mocha-junit-reporter": "1.23.3",
     "typescript": "3.8.3"
